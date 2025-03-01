@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Homepage with Cloud and Lightning Effect</title>
+    <title>Enhanced Cloud and Lightning Effect</title>
     <style>
-        /* Import Fonts for a Professional Look */
+        /* Import font */
         @import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,900|Lato:100,300,900');
 
-        /* Reset and Base Styles */
+        /* Reset and basic styles */
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: auto; /* Changed to allow scrolling */
+            overflow: hidden;
             font-family: 'Titillium Web', 'Lato', sans-serif;
             background: #000;
-            scroll-behavior: smooth; /* Smooth scrolling for navigation */
         }
 
-        /* Cloud Background Layer */
+        /* Background with enhanced cloud effect */
         .bg {
             position: fixed;
             top: 0;
@@ -32,11 +31,11 @@
             background-size: cover;
             background-attachment: fixed;
             z-index: -2;
-            filter: brightness(0.7) contrast(1.1); /* Enhanced visibility */
-            animation: cloud-drift 60s linear infinite; /* Subtle movement */
+            filter: brightness(0.7) contrast(1.1); /* Enhanced cloud visibility */
+            animation: cloud-drift 60s linear infinite; /* Subtle cloud movement */
         }
 
-        /* Lightning Overlay Layer */
+        /* Enhanced lightning overlay */
         .lightning {
             position: fixed;
             top: 0;
@@ -48,76 +47,30 @@
             background-origin: content-box;
             background-size: cover;
             background-attachment: fixed;
-            filter: brightness(4) contrast(1.5); /* Intense lightning */
+            filter: brightness(4) contrast(1.5); /* More intense lightning */
             z-index: -1;
             opacity: 0;
-            animation: flash 7s infinite ease-out; /* Dynamic flash effect */
+            animation: flash 7s infinite ease-out; /* Refined flash timing */
             animation-delay: 2s;
         }
 
-        /* Cloud Drift Animation */
+        /* Subtle cloud drift animation */
         @keyframes cloud-drift {
             0% { background-position: center center; }
             100% { background-position: calc(center + 50px) calc(center + 30px); }
         }
 
-        /* Lightning Flash Animation */
+        /* Refined flash animation for lightning */
         @keyframes flash {
             0% { opacity: 0; }
             92% { opacity: 0; }
-            93% { opacity: 0.8; }
+            93% { opacity: 0.8; } /* Slightly brighter peak */
             94% { opacity: 0.3; }
-            96% { opacity: 1; }
+            96% { opacity: 1; } /* Full intensity */
             100% { opacity: 0; }
         }
 
-        /* Navigation Bar - Discord Style */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #202225; /* Discord's dark gray */
-            z-index: 1001;
-            padding: 10px 0;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav li {
-            margin: 0 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s, text-shadow 0.3s;
-        }
-
-        /* Hamburger Menu for Mobile */
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background: white;
-            margin: 5px;
-        }
-
-        /* Logo Styling */
+        /* Enhanced logo styling */
         #logo {
             z-index: 1000;
             width: 100%;
@@ -126,199 +79,17 @@
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* Centered properly */
             font-weight: 900;
-            text-align: center;
+            text-align: center; /* Ensure text alignment */
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect */
-            cursor: pointer; /* Indicates interactivity */
         }
 
         #logo span {
             font-weight: 100;
         }
 
-        /* General Section Styling */
-        section {
-            position: relative;
-            z-index: 1000;
-            margin-top: 200px; /* Space below logo */
-            text-align: center;
-            color: white;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        /* Featured Content Cards */
-        .card {
-            display: inline-block;
-            width: 200px;
-            height: 100px;
-            background: #36393F; /* Discord card color */
-            color: white;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 8px rgba(0, 255, 255, 0.5); /* Neon blue glow */
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* About Section */
-        #about {
-            margin-top: 50px;
-        }
-
-        #about p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Contact Section */
-        #contact {
-            margin-top: 50px;
-            margin-bottom: 100px; /* Space above footer */
-        }
-
-        #contact form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #contact input, #contact textarea {
-            width: 300px;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background: #36393F;
-            color: white;
-        }
-
-        #contact button {
-            background: #7289DA; /* Discord button color */
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        #contact button:hover {
-            background: #5B6EAE;
-        }
-
-        /* Footer */
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #202225;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            z-index: 1001;
-        }
-
-        /* Back-to-Top Button */
-        #back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #7289DA;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none;
-            font-size: 1rem;
-        }
-
-        /* Modal Window */
-        #modal {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #36393F;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            z-index: 1002;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: none;
-        }
-
-        #modal p {
-            margin: 0 0 10px;
-        }
-
-        #modal button {
-            background: #7289DA;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            nav ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background: #202225;
-            }
-
-            nav ul.show {
-                display: flex;
-            }
-
-            nav li {
-                margin: 10px 0;
-            }
-
-            #logo {
-                font-size: 4rem;
-            }
-
-            .card {
-                display: block;
-                width: 80%;
-                margin: 10px auto;
-            }
-
-            #contact input, #contact textarea {
-                width: 80%;
-            }
-        }
-
+        /* Responsiveness */
         @media screen and (max-width: 630px) {
             #logo {
                 font-size: 3rem;
@@ -327,130 +98,13 @@
     </style>
 </head>
 <body>
-    <!-- Background Layers -->
+    <!-- Two layers of image -->
     <div class="bg"></div>
     <div class="lightning flashit"></div>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <ul>
-            <li><a href="#featured">Featured</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Interactive Logo -->
+    <!-- Logo -->
     <div id="logo">
         <h1>STORM<span>CLOUD</span></h1>
     </div>
-
-    <!-- Featured Content Section -->
-    <section id="featured">
-        <h2>Featured Content</h2>
-        <div class="card">Card 1</div>
-        <div class="card">Card 2</div>
-        <div class="card">Card 3</div>
-        <div class="card">Card 4</div>
-        <div class="card">Card 5</div>
-        <div class="card">Card 6</div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2023 STORMCLOUD. All rights reserved.</p>
-    </footer>
-
-    <!-- Back-to-Top Button -->
-    <button id="back-to-top">↑</button>
-
-    <!-- Modal Window -->
-    <div id="modal">
-        <p>This is a modal window.</p>
-        <button id="close-modal">Close</button>
-    </div>
-
-    <!-- JavaScript for Interactivity -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Element References
-            const logo = document.getElementById('logo');
-            const modal = document.getElementById('modal');
-            const closeModal = document.getElementById('close-modal');
-            const hamburger = document.querySelector('.hamburger');
-            const navMenu = document.querySelector('nav ul');
-            const backToTop = document.getElementById('back-to-top');
-            const cards = document.querySelectorAll('.card');
-            const navLinks = document.querySelectorAll('nav a');
-
-            // Logo Click to Open Modal
-            logo.addEventListener('click', () => {
-                modal.style.display = 'block';
-            });
-
-            // Close Modal
-            closeModal.addEventListener('click', () => {
-                modal.style.display = 'none';
-            });
-
-            // Toggle Hamburger Menu
-            hamburger.addEventListener('click', () => {
-                navMenu.classList.toggle('show');
-            });
-
-            // Back-to-Top Button Visibility
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTop.style.display = 'block';
-                } else {
-                    backToTop.style.display = 'none';
-                }
-            });
-
-            // Scroll to Top
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // Card Animation Delays
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${0.2 * (index + 1)}s`;
-            });
-
-            // Navigation Link Hover Effects
-            navLinks.forEach(link => {
-                link.addEventListener('mouseover', () => {
-                    link.style.color = '#00FFFF'; // Neon blue
-                    link.style.textShadow = '0 0 5px #00FFFF';
-                });
-                link.addEventListener('mouseout', () => {
-                    link.style.color = 'white';
-                    link.style.textShadow = 'none';
-                });
-            });
-        });
-    </script>
 </body>
 </html>

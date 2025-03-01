@@ -1,292 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Webcrumbs Plugin</title>
-        <style>
-            @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
-            @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
-        </style>
-    </head>
-    <body>
-        <div id="webcrumbs">
-            <!-- Original Section -->
-            <div
-                class="w-[800px] h-[450px] relative bg-gradient-to-b from-blue-900/80 to-black border-2 border-blue-500 rounded-lg overflow-hidden"
-            >
-                <div
-                    class="absolute inset-0 bg-[radial-gradient(#104080_1px,transparent_1px)] bg-[size:20px_20px] opacity-20"
-                ></div>
-                <div class="absolute top-0 left-0 right-0 h-[3px] bg-blue-500"></div>
-                <div class="absolute top-0 left-0 w-[3px] h-20 bg-blue-500"></div>
-                <div class="absolute top-0 right-0 w-[3px] h-20 bg-blue-500"></div>
-                <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-blue-500"></div>
-                <div class="absolute bottom-0 left-0 w-[3px] h-20 bg-blue-500"></div>
-                <div class="absolute bottom-0 right-0 w-[3px] h-20 bg-blue-500"></div>
-                <svg
-                    class="absolute top-0 left-0 w-1/3 h-1/3"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M0 0 H 30 L 40 10 H 70 L 80 20 H 90 L 100 30 V 50 L 90 60 H 70 L 60 70 H 40 L 30 80 H 10 L 0 90"
-                        stroke="#0080ff"
-                        stroke-width="1.5"
-                        fill="none"
-                    ></path>
-                    <circle cx="30" cy="10" r="2" fill="#40a0ff"></circle>
-                    <circle cx="70" cy="20" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="30" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="60" r="2" fill="#40a0ff"></circle>
-                    <circle cx="40" cy="70" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="80" r="2" fill="#40a0ff"></circle>
-                </svg>
-                <svg
-                    class="absolute top-0 right-0 w-1/3 h-1/3"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M100 0 H 70 L 60 10 H 30 L 20 20 H 10 L 0 30 V 50 L 10 60 H 30 L 40 70 H 60 L 70 80 H 90 L 100 90"
-                        stroke="#0080ff"
-                        stroke-width="1.5"
-                        fill="none"
-                    ></path>
-                    <circle cx="70" cy="10" r="2" fill="#40a0ff"></circle>
-                    <circle cx="30" cy="20" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="30" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="60" r="2" fill="#40a0ff"></circle>
-                    <circle cx="60" cy="70" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="80" r="2" fill="#40a0ff"></circle>
-                </svg>
-                <svg
-                    class="absolute bottom-0 left-0 w-1/3 h-1/3"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M0 100 H 30 L 40 90 H 70 L 80 80 H 90 L 100 70 V 50 L 90 40 H 70 L 60 30 H 40 L 30 20 H 10 L 0 10"
-                        stroke="#0080ff"
-                        stroke-width="1.5"
-                        fill="none"
-                    ></path>
-                    <circle cx="30" cy="90" r="2" fill="#40a0ff"></circle>
-                    <circle cx="70" cy="80" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="70" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="40" r="2" fill="#40a0ff"></circle>
-                    <circle cx="40" cy="30" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="20" r="2" fill="#40a0ff"></circle>
-                </svg>
-                <svg
-                    class="absolute bottom-0 right-0 w-1/3 h-1/3"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M100 100 H 70 L 60 90 H 30 L 20 80 H 10 L 0 70 V 50 L 10 40 H 30 L 40 30 H 60 L 70 20 H 90 L 100 10"
-                        stroke="#0080ff"
-                        stroke-width="1.5"
-                        fill="none"
-                    ></path>
-                    <circle cx="70" cy="90" r="2" fill="#40a0ff"></circle>
-                    <circle cx="30" cy="80" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="70" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="40" r="2" fill="#40a0ff"></circle>
-                    <circle cx="60" cy="30" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="20" r="2" fill="#40a0ff"></circle>
-                </svg>
-                <div class="absolute inset-0 bg-blue-500/5"></div>
-                <div class="absolute top-1/4 left-1/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-                <div class="absolute top-2/3 left-1/4 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-                <div class="absolute top-1/2 left-3/4 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-                <div class="absolute top-3/4 left-2/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-                <div class="absolute top-1/3 left-1/2 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-                <div
-                    class="absolute inset-[30px] border border-blue-600/50 rounded bg-black/40 backdrop-blur-sm transition-all duration-500 hover:border-blue-400/70 hover:bg-black/30 shadow-[inset_0_0_20px_rgba(0,128,255,0.2)]"
-                ></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Futuristic Status Display</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cyber-blue: #0080ff;
+      --cyber-blue-dark: #0060cc;
+      --cyber-background: #001020;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Rajdhani', sans-serif;
+      background-color: black;
+      color: white;
+      min-height: 100vh;
+    }
+    
+    .font-digital {
+      font-family: 'Share Tech Mono', monospace;
+    }
+    
+    .cyber-grid {
+      background-image: radial-gradient(rgba(0, 128, 255, 0.2) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    
+    .container-glow {
+      box-shadow: 0 0 10px rgba(0, 128, 255, 0.3);
+    }
+    
+    .text-glow {
+      text-shadow: 0 0 8px rgba(0, 128, 255, 0.7);
+    }
+    
+    .text-cyber-blue {
+      color: var(--cyber-blue);
+    }
+    
+    .bg-cyber-background {
+      background-color: var(--cyber-background);
+    }
+    
+    .border-cyber-blue {
+      border-color: var(--cyber-blue);
+    }
+    
+    .border-cyber-border {
+      border-color: rgba(0, 128, 255, 0.3);
+    }
+    
+    .stat-bar {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    
+    .stat-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: var(--percent);
+      background-color: var(--cyber-blue);
+      box-shadow: 0 0 8px rgba(0, 128, 255, 0.8);
+    }
+    
+    .scan-line {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(0, 128, 255, 0.5);
+      box-shadow: 0 0 10px rgba(0, 128, 255, 0.5);
+      opacity: 0.7;
+      z-index: 10;
+      animation: scan 8s linear infinite;
+    }
+    
+    @keyframes scan {
+      0% {
+        top: 0%;
+      }
+      100% {
+        top: 100%;
+      }
+    }
+    
+    @keyframes flicker {
+      0%, 19.999%, 22%, 62.999%, 64%, 69.999%, 72%, 100% {
+        opacity: 0.99;
+      }
+      20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+      }
+    }
+    
+    .animate-pulse-glow {
+      animation: pulse-glow 2s infinite;
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% {
+        text-shadow: 0 0 8px rgba(0, 128, 255, 0.7);
+      }
+      50% {
+        text-shadow: 0 0 16px rgba(0, 128, 255, 0.9);
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .container-glow {
+        box-shadow: 0 0 5px rgba(0, 128, 255, 0.3);
+      }
+      
+      .text-glow {
+        text-shadow: 0 0 4px rgba(0, 128, 255, 0.7);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen bg-black bg-opacity-90 text-white flex flex-col">
+    <!-- Background effects -->
+    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, var(--cyber-background), black); opacity: 0.9;"></div>
+    <div style="position: absolute; inset: 0;" class="cyber-grid"></div>
+    
+    <!-- Content container -->
+    <div style="position: relative; flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px;">
+      <div style="transition: all 1s; width: 100%; opacity: 1; transform: scale(1);">
+        <div style="position: relative; width: 100%; max-width: 600px; margin: 0 auto; padding: 16px;">
+          <div style="position: absolute; inset: 0; background-color: var(--cyber-background); opacity: 0.8; border-radius: 8px;"></div>
+          
+          <div style="position: absolute; inset: 0; opacity: 0.2; border-radius: 8px;" class="cyber-grid"></div>
+          
+          <!-- Edge highlights -->
+          <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background-color: var(--cyber-blue); opacity: 0.8;"></div>
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background-color: var(--cyber-blue); opacity: 0.8;"></div>
+          <div style="position: absolute; top: 0; left: 0; width: 1px; height: 64px; background-color: var(--cyber-blue); opacity: 0.8;"></div>
+          <div style="position: absolute; top: 0; right: 0; width: 1px; height: 64px; background-color: var(--cyber-blue); opacity: 0.8;"></div>
+          <div style="position: absolute; bottom: 0; left: 0; width: 1px; height: 64px; background-color: var(--cyber-blue); opacity: 0.8;"></div>
+          <div style="position: absolute; bottom: 0; right: 0; width: 1px; height: 64px; background-color: var(--cyber-blue); opacity: 0.8;"></div>
+          
+          <!-- Corner decorations -->
+          <!-- Top left corner -->
+          <svg style="position: absolute; top: 0; left: 0; width: 96px; height: 96px; opacity: 0.7;" viewBox="0 0 100 100" fill="none">
+            <path d="M0 0 H 30 L 40 10 H 70 L 80 20 H 90 L 100 30 V 50 L 90 60 H 70 L 60 70 H 40 L 30 80 H 10 L 0 90" 
+                  stroke="#0080ff" stroke-width="1.5" fill="none"></path>
+            <circle cx="30" cy="10" r="2" fill="#40a0ff"></circle>
+            <circle cx="70" cy="20" r="2" fill="#40a0ff"></circle>
+            <circle cx="90" cy="30" r="2" fill="#40a0ff"></circle>
+          </svg>
+          
+          <!-- Top right corner -->
+          <svg style="position: absolute; top: 0; right: 0; width: 96px; height: 96px; opacity: 0.7;" viewBox="0 0 100 100" fill="none">
+            <path d="M100 0 H 70 L 60 10 H 30 L 20 20 H 10 L 0 30 V 50 L 10 60 H 30 L 40 70 H 60 L 70 80 H 90 L 100 90" 
+                  stroke="#0080ff" stroke-width="1.5" fill="none"></path>
+            <circle cx="70" cy="10" r="2" fill="#40a0ff"></circle>
+            <circle cx="30" cy="20" r="2" fill="#40a0ff"></circle>
+            <circle cx="10" cy="30" r="2" fill="#40a0ff"></circle>
+          </svg>
+          
+          <!-- Bottom left corner -->
+          <svg style="position: absolute; bottom: 0; left: 0; width: 96px; height: 96px; opacity: 0.7;" viewBox="0 0 100 100" fill="none">
+            <path d="M0 100 H 30 L 40 90 H 70 L 80 80 H 90 L 100 70 V 50 L 90 40 H 70 L 60 30 H 40 L 30 20 H 10 L 0 10" 
+                  stroke="#0080ff" stroke-width="1.5" fill="none"></path>
+            <circle cx="30" cy="90" r="2" fill="#40a0ff"></circle>
+            <circle cx="70" cy="80" r="2" fill="#40a0ff"></circle>
+            <circle cx="90" cy="70" r="2" fill="#40a0ff"></circle>
+          </svg>
+          
+          <!-- Bottom right corner -->
+          <svg style="position: absolute; bottom: 0; right: 0; width: 96px; height: 96px; opacity: 0.7;" viewBox="0 0 100 100" fill="none">
+            <path d="M100 100 H 70 L 60 90 H 30 L 20 80 H 10 L 0 70 V 50 L 10 40 H 30 L 40 30 H 60 L 70 20 H 90 L 100 10" 
+                  stroke="#0080ff" stroke-width="1.5" fill="none"></path>
+            <circle cx="70" cy="90" r="2" fill="#40a0ff"></circle>
+            <circle cx="30" cy="80" r="2" fill="#40a0ff"></circle>
+            <circle cx="10" cy="70" r="2" fill="#40a0ff"></circle>
+          </svg>
+          
+          <!-- Scan line effect -->
+          <div class="scan-line"></div>
+          
+          <!-- Ambient dot effects -->
+          <div style="position: absolute; top: 25%; left: 33%; width: 4px; height: 4px; background-color: var(--cyber-blue); border-radius: 50%; animation: pulse 3s infinite;"></div>
+          <div style="position: absolute; top: 66%; left: 25%; width: 4px; height: 4px; background-color: var(--cyber-blue); border-radius: 50%; animation: pulse 3s infinite;"></div>
+          <div style="position: absolute; top: 50%; left: 75%; width: 4px; height: 4px; background-color: var(--cyber-blue); border-radius: 50%; animation: pulse 3s infinite;"></div>
+          
+          <!-- Main content container -->
+          <div style="position: relative; z-index: 10; border: 1px solid rgba(0, 128, 255, 0.3); border-radius: 4px; background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px); padding: 12px;" class="container-glow">
+            <!-- Status Header -->
+            <div style="text-align: center; margin-bottom: 24px;">
+              <div style="display: inline-block; border: 1px solid rgba(0, 128, 255, 0.5); padding: 0 32px; margin-bottom: 16px;">
+                <h1 style="font-size: 24px; font-family: 'Share Tech Mono', monospace; letter-spacing: 2px; color: var(--cyber-blue);" class="text-glow">STATUS</h1>
+              </div>
+              
+              <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+                <div style="font-size: 60px; font-family: 'Share Tech Mono', monospace; color: var(--cyber-blue); animation: flicker 4s infinite;" class="text-glow">18</div>
+                <div style="display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+                  <span style="color: rgba(0, 128, 255, 0.7); font-size: 10px;">LEVEL</span>
+                  <div style="margin-top: 2px;">
+                    <span style="color: rgba(0, 128, 255, 0.7); font-size: 10px;">JOB: <span style="color: var(--cyber-blue);">None</span></span>
+                  </div>
+                  <div style="display: block; margin-top: 2px;">
+                    <span style="color: rgba(0, 128, 255, 0.7); font-size: 10px;">TITLE: <span style="color: var(--cyber-blue);">Wolf Assassin</span></span>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <!-- New Section: Futuristic Background -->
-            <div
-                class="w-full h-[600px] relative bg-gradient-to-b from-blue-900/80 to-black border-2 border-blue-500 rounded-lg overflow-hidden mt-10"
-            >
-                <div
-                    class="absolute inset-0 bg-[radial-gradient(#104080_1px,transparent_1px)] bg-[size:20px_20px] opacity-20"
-                ></div>
-                <!-- Circuit Patterns -->
-                <svg
-                    class="absolute top-0 left-0 w-full h-full"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M0 0 H 30 L 40 10 H 70 L 80 20 H 90 L 100 30 V 50 L 90 60 H 70 L 60 70 H 40 L 30 80 H 10 L 0 90"
-                        stroke="#0080ff"
-                        stroke-width="1.5"
-                        fill="none"
-                    ></path>
-                    <circle cx="30" cy="10" r="2" fill="#40a0ff"></circle>
-                    <circle cx="70" cy="20" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="30" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="60" r="2" fill="#40a0ff"></circle>
-                    <circle cx="40" cy="70" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="80" r="2" fill="#40a0ff"></circle>
-                </svg>
-                <!-- Pulsing Dots -->
-                <div class="absolute top-1/4 left-1/3 w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
-                <div class="absolute top-2/3 left-1/4 w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
-                <div class="absolute top-1/2 left-3/4 w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
-                <!-- Central Gradient Area -->
-                <div
-                    class="absolute inset-[50px] bg-gradient-to-b from-blue-900/50 to-black/50 border border-blue-600/50 rounded-lg backdrop-blur-sm"
-                ></div>
+            
+            <!-- Status Bars -->
+            <div style="border: 1px solid rgba(0, 128, 255, 0.3); padding: 12px; margin-bottom: 12px; background-color: rgba(0, 0, 0, 0.3);">
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 4px;">
+                  <div style="width: 100%;">
+                    <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--cyber-blue); margin-bottom: 4px;">
+                      <span style="display: flex; align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; color: var(--cyber-blue);">
+                          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                        </svg>
+                        <span style="font-family: 'Share Tech Mono', monospace;">HP</span>
+                      </span>
+                      <span style="font-family: 'Share Tech Mono', monospace;">2250/2250</span>
+                    </div>
+                    <div class="stat-bar" style="height: 8px; --percent: 100%;">
+                      <div style="position: absolute; inset: 0; background-color: rgba(0, 128, 255, 0.2); opacity: 0.2;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 4px;">
+                  <div style="width: 100%;">
+                    <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--cyber-blue); margin-bottom: 4px;">
+                      <span style="display: flex; align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; color: var(--cyber-blue);">
+                          <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
+                          <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>
+                        </svg>
+                        <span style="font-family: 'Share Tech Mono', monospace;">MP</span>
+                      </span>
+                      <span style="font-family: 'Share Tech Mono', monospace;">350/350</span>
+                    </div>
+                    <div class="stat-bar" style="height: 8px; --percent: 100%;">
+                      <div style="position: absolute; inset: 0; background-color: rgba(0, 128, 255, 0.2); opacity: 0.2;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 4px;">
+                  <div style="width: 100%;">
+                    <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--cyber-blue); margin-bottom: 4px;">
+                      <span style="display: flex; align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; color: var(--cyber-blue);">
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                        </svg>
+                        <span style="font-family: 'Share Tech Mono', monospace;">FATIGUE</span>
+                      </span>
+                      <span style="font-family: 'Share Tech Mono', monospace;">0/100</span>
+                    </div>
+                    <div class="stat-bar" style="height: 8px; --percent: 0%;">
+                      <div style="position: absolute; inset: 0; background-color: rgba(0, 128, 255, 0.2); opacity: 0.2;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            
+            <!-- Character Stats -->
+            <div style="border: 1px solid rgba(0, 128, 255, 0.3); padding: 12px; background-color: rgba(0, 0, 0, 0.3);">
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 32px; row-gap: 12px;">
+                <div style="display: flex; align-items: center; gap: 4px; animation: flicker 3s infinite;">
+                  <div style="color: var(--cyber-blue); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m12 14 4-4"/>
+                      <path d="M3.34 19a10 10 0 1 1 17.32 0"/>
+                    </svg>
+                  </div>
+                  <div style="display: flex; flex-direction: column;">
+                    <span style="color: rgba(0, 128, 255, 0.7); font-size: 10px; text-transform: uppercase; letter-spacing: 2px;">STR</span>
+                    <span style="color: var(--cyber-blue); font-size: 24px; font-family: 'Share Tech Mono', monospace; letter-spacing: 2px;">50</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 4px; animation: flicker 3s infinite;">
+                  <div style="color: var(--cyber-blue); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                    </svg>
+                  </div>
+                  <div style="display: flex; flex-direction: column;">
+                    <span style="color: rgba(0, 128, 255, 0.7); font-size: 10px; text-transform: uppercase; letter-spacing: 2px;">VIT</span>
+                    <span style="color: var(--cyber-blue); font-size: 24px; font-family: 'Share Tech Mono', monospace; letter-spacing: 2px;">27</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 4px; animation: flicker 3s infinite;">
+                  <div style="color: var(--cyber-blue); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                  </div>
+                  <div style="display: flex; flex-direction: column;">
+                    <span style="color: rgba(0, 128, 255, 0.7); font-size: 10px; text-transform: uppercase; letter-spacing: 2px;">AGI</span>
+                    <span style="color: var(--cyber-blue); font-size: 24px; font-family: 'Share Tech Mono', monospace; letter-spacing: 2px;">35</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 4px; animation: flicker 3s infinite;">
+                  <div style="color: var(--cyber-blue); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 9.76A5 5 0 0 0 19.85 5H18a3 3 0 0 0-3-3h-1a3 3 0 0 0-3 3 2 2 0 0 0 0 4h6.73a4 4 0 0 1 1.27.21M9.13 5.11A5 5 0 0 0 5.85 9H4a3 3 0 0 0-3 3v1a3 3 0 0 0 3 3h1a3 3 0 0 0 3-3 2 2 0 0 0 0-4H4.13a4 4 0 0 1-1.27-.21"/>
+                      <path d="M9.3 15.64A5 5 0 0 0 9.3 17l.7 3"/>
+                      <path d="m14.7 15.64-.7 1.36-.7 3"/>
+                    </svg>
+                  </div>
+                  <div style="display: flex; flex-direction: column;">
+                    <span style="color: rgba(0, 128, 255, 0.7); font-size: 10px; text-transform: uppercase; letter-spacing: 2px;">INT</span>
+                    <span style="color: var(--cyber-blue); font-size: 24px; font-family: 'Share Tech Mono', monospace; letter-spacing: 2px;">27</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 4px; animation: flicker 3s infinite;">
+                  <div style="color: var(--cyber-blue); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
+                      <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>
+                    </svg>
+                  </div>
+                  <div style="display: flex; flex-direction: column;">
+                    <span style="color: rgba(0, 128, 255, 0.7); font-size: 10px; text-transform: uppercase; letter-spacing: 2px;">PER</span>
+                    <span style="color: var(--cyber-blue); font-size: 24px; font-family: 'Share Tech Mono', monospace; letter-spacing: 2px;">29</span>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: flex-end; align-items: center;">
+                  <div style="color: var(--cyber-blue); font-size: 32px; font-family: 'Share Tech Mono', monospace; animation: pulse-glow 2s infinite;">0</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+    
+    <!-- Footer with credits -->
+    <footer style="position: relative; text-align: center; padding: 8px; color: rgba(0, 128, 255, 0.5); font-size: 10px;">
+      <div style="font-family: 'Share Tech Mono', monospace; animation: flicker 4s infinite;">SYSTEM v2.3.7 // HOLOGRAPHIC INTERFACE</div>
+    </footer>
+  </div>
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                content: ["./src/**/*.{html,js}"],
-                theme: {
-                    name: "Bluewave",
-                    fontFamily: {
-                        sans: [
-                            "Open Sans",
-                            "ui-sans-serif",
-                            "system-ui",
-                            "sans-serif",
-                            '"Apple Color Emoji"',
-                            '"Segoe UI Emoji"',
-                            '"Segoe UI Symbol"',
-                            '"Noto Color Emoji"'
-                        ]
-                    },
-                    extend: {
-                        fontFamily: {
-                            title: [
-                                "Lato",
-                                "ui-sans-serif",
-                                "system-ui",
-                                "sans-serif",
-                                '"Apple Color Emoji"',
-                                '"Segoe UI Emoji"',
-                                '"Segoe UI Symbol"',
-                                '"Noto Color Emoji"'
-                            ],
-                            body: [
-                                "Open Sans",
-                                "ui-sans-serif",
-                                "system-ui",
-                                "sans-serif",
-                                '"Apple Color Emoji"',
-                                '"Segoe UI Emoji"',
-                                '"Segoe UI Symbol"',
-                                '"Noto Color Emoji"'
-                            ]
-                        },
-                        colors: {
-                            neutral: {
-                                50: "#f7f7f7",
-                                100: "#eeeeee",
-                                200: "#e0e0e0",
-                                300: "#cacaca",
-                                400: "#b1b1b1",
-                                500: "#999999",
-                                600: "#7f7f7f",
-                                700: "#676767",
-                                800: "#545454",
-                                900: "#464646",
-                                950: "#282828"
-                            },
-                            primary: {
-                                50: "#f3f1ff",
-                                100: "#e9e5ff",
-                                200: "#d5cfff",
-                                300: "#b7a9ff",
-                                400: "#9478ff",
-                                500: "#7341ff",
-                                600: "#631bff",
-                                700: "#611bf8",
-                                800: "#4607d0",
-                                900: "#3c08aa",
-                                950: "#220174",
-                                DEFAULT: "#611bf8"
-                            }
-                        }
-                    },
-                    fontSize: {
-                        xs: ["12px", {lineHeight: "19.200000000000003px"}],
-                        sm: ["14px", {lineHeight: "21px"}],
-                        base: ["16px", {lineHeight: "25.6px"}],
-                        lg: ["18px", {lineHeight: "27px"}],
-                        xl: ["20px", {lineHeight: "28px"}],
-                        "2xl": ["24px", {lineHeight: "31.200000000000003px"}],
-                        "3xl": ["30px", {lineHeight: "36px"}],
-                        "4xl": ["36px", {lineHeight: "41.4px"}],
-                        "5xl": ["48px", {lineHeight: "52.800000000000004px"}],
-                        "6xl": ["60px", {lineHeight: "66px"}],
-                        "7xl": ["72px", {lineHeight: "75.60000000000001px"}],
-                        "8xl": ["96px", {lineHeight: "100.80000000000001px"}],
-                        "9xl": ["128px", {lineHeight: "134.4px"}]
-                    },
-                    borderRadius: {
-                        none: "0px",
-                        sm: "6px",
-                        DEFAULT: "12px",
-                        md: "18px",
-                        lg: "24px",
-                        xl: "36px",
-                        "2xl": "48px",
-                        "3xl": "72px",
-                        full: "9999px"
-                    },
-                    spacing: {
-                        0: "0px",
-                        1: "4px",
-                        2: "8px",
-                        3: "12px",
-                        4: "16px",
-                        5: "20px",
-                        6: "24px",
-                        7: "28px",
-                        8: "32px",
-                        9: "36px",
-                        10: "40px",
-                        11: "44px",
-                        12: "48px",
-                        14: "56px",
-                        16: "64px",
-                        20: "80px",
-                        24: "96px",
-                        28: "112px",
-                        32: "128px",
-                        36: "144px",
-                        40: "160px",
-                        44: "176px",
-                        48: "192px",
-                        52: "208px",
-                        56: "224px",
-                        60: "240px",
-                        64: "256px",
-                        72: "288px",
-                        80: "320px",
-                        96: "384px",
-                        px: "1px",
-                        0.5: "2px",
-                        1.5: "6px",
-                        2.5: "10px",
-                        3.5: "14px"
-                    }
-                },
-                plugins: [],
-                important: "#webcrumbs"
-            }
-        </script>
-    </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add simple loading effect
+      setTimeout(function() {
+        const mainContent = document.querySelector('.main-content');
+        if (mainContent) {
+          mainContent.style.opacity = '1';
+          mainContent.style.transform = 'scale(1)';
+        }
+      }, 600);
+      
+      // Add random flicker effect
+      setInterval(function() {
+        if (Math.random() > 0.7) {
+          const display = document.querySelector('.main-content');
+          if (display) {
+            display.style.opacity = '0.95';
+            setTimeout(function() {
+              display.style.opacity = '1';
+            }, 150);
+          }
+        }
+      }, 3000);
+    });
+  </script>
+</body>
 </html>

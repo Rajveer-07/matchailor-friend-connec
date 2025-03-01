@@ -1,0 +1,83 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #000; /* Solid black background for high contrast */
+}
+
+.circuit-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.central-area {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(135deg, #001f3f, #000428); /* Deep blue to navy gradient */
+    border: 2px solid #00FFFF; /* Neon blue border */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8); /* Enhanced, brighter glow */
+    overflow: hidden;
+}
+
+/* Subtle grid pattern in the central area */
+.central-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 255, 0.08),
+        rgba(0, 255, 255, 0.08) 1px,
+        transparent 1px,
+        transparent 20px
+    ),
+    repeating-linear-gradient(
+        90deg,
+        rgba(0, 255, 255, 0.08),
+        rgba(0, 255, 255, 0.08) 1px,
+        transparent 1px,
+        transparent 20px
+    );
+    opacity: 0.7; /* Slightly more defined grid */
+}
+
+/* Circuit border using SVG */
+.circuit-background::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10 10 L90 10 L90 90 L10 90 Z M20 20 L80 20 L80 80 L20 80 Z M30 30 L70 30 L70 70 L30 70 Z M40 40 L60 40 M40 60 L60 60" stroke="%2300FFFF" stroke-width="2" fill="none"/></svg>') repeat;
+    background-size: 40px 40px; /* Denser circuit pattern */
+    filter: brightness(1.8) blur(1px); /* Brighter neon blue with subtle blur */
+    animation: pulse 2s infinite ease-in-out; /* Faster, smoother pulse */
+}
+
+@keyframes pulse {
+    0% { filter: brightness(1.5) blur(1px); }
+    50% { filter: brightness(2.2) blur(1.2px); }
+    100% { filter: brightness(1.5) blur(1px); }
+}
+
+/* Optional: Styling for content on top */
+.content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

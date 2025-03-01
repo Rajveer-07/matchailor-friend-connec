@@ -1,111 +1,254 @@
-<div className="w-[800px] h-[450px] relative bg-gradient-to-b from-blue-900/80 to-black border-2 border-blue-500 rounded-lg overflow-hidden">
-    {/* Main content container with grid overlay */}
-    <div className="absolute inset-0 bg-[radial-gradient(#104080_1px,transparent_1px)] bg-[size:20px_20px] opacity-20"></div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Webcrumbs Plugin</title>
+        <style>
+            @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+            @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+        </style>
+    </head>
+    <body>
+        <div id="webcrumbs">
+            <div
+                class="w-[800px] h-[450px] relative bg-gradient-to-b from-blue-900/80 to-black border-2 border-blue-500 rounded-lg overflow-hidden"
+            >
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(#104080_1px,transparent_1px)] bg-[size:20px_20px] opacity-20"
+                ></div>
+                <div class="absolute top-0 left-0 right-0 h-[3px] bg-blue-500"></div>
+                <div class="absolute top-0 left-0 w-[3px] h-20 bg-blue-500"></div>
+                <div class="absolute top-0 right-0 w-[3px] h-20 bg-blue-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-blue-500"></div>
+                <div class="absolute bottom-0 left-0 w-[3px] h-20 bg-blue-500"></div>
+                <div class="absolute bottom-0 right-0 w-[3px] h-20 bg-blue-500"></div>
+                <svg
+                    class="absolute top-0 left-0 w-1/3 h-1/3"
+                    viewBox="0 0 100 100"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M0 0 H 30 L 40 10 H 70 L 80 20 H 90 L 100 30 V 50 L 90 60 H 70 L 60 70 H 40 L 30 80 H 10 L 0 90"
+                        stroke="#0080ff"
+                        stroke-width="1.5"
+                        fill="none"
+                    ></path>
+                    <circle cx="30" cy="10" r="2" fill="#40a0ff"></circle>
+                    <circle cx="70" cy="20" r="2" fill="#40a0ff"></circle>
+                    <circle cx="90" cy="30" r="2" fill="#40a0ff"></circle>
+                    <circle cx="90" cy="60" r="2" fill="#40a0ff"></circle>
+                    <circle cx="40" cy="70" r="2" fill="#40a0ff"></circle>
+                    <circle cx="10" cy="80" r="2" fill="#40a0ff"></circle>
+                </svg>
+                <svg
+                    class="absolute top-0 right-0 w-1/3 h-1/3"
+                    viewBox="0 0 100 100"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M100 0 H 70 L 60 10 H 30 L 20 20 H 10 L 0 30 V 50 L 10 60 H 30 L 40 70 H 60 L 70 80 H 90 L 100 90"
+                        stroke="#0080ff"
+                        stroke-width="1.5"
+                        fill="none"
+                    ></path>
+                    <circle cx="70" cy="10" r="2" fill="#40a0ff"></circle>
+                    <circle cx="30" cy="20" r="2" fill="#40a0ff"></circle>
+                    <circle cx="10" cy="30" r="2" fill="#40a0ff"></circle>
+                    <circle cx="10" cy="60" r="2" fill="#40a0ff"></circle>
+                    <circle cx="60" cy="70" r="2" fill="#40a0ff"></circle>
+                    <circle cx="90" cy="80" r="2" fill="#40a0ff"></circle>
+                </svg>
+                <svg
+                    class="absolute bottom-0 left-0 w-1/3 h-1/3"
+                    viewBox="0 0 100 100"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M0 100 H 30 L 40 90 H 70 L 80 80 H 90 L 100 70 V 50 L 90 40 H 70 L 60 30 H 40 L 30 20 H 10 L 0 10"
+                        stroke="#0080ff"
+                        stroke-width="1.5"
+                        fill="none"
+                    ></path>
+                    <circle cx="30" cy="90" r="2" fill="#40a0ff"></circle>
+                    <circle cx="70" cy="80" r="2" fill="#40a0ff"></circle>
+                    <circle cx="90" cy="70" r="2" fill="#40a0ff"></circle>
+                    <circle cx="90" cy="40" r="2" fill="#40a0ff"></circle>
+                    <circle cx="40" cy="30" r="2" fill="#40a0ff"></circle>
+                    <circle cx="10" cy="20" r="2" fill="#40a0ff"></circle>
+                </svg>
+                <svg
+                    class="absolute bottom-0 right-0 w-1/3 h-1/3"
+                    viewBox="0 0 100 100"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M100 100 H 70 L 60 90 H 30 L 20 80 H 10 L 0 70 V 50 L 10 40 H 30 L 40 30 H 60 L 70 20 H 90 L 100 10"
+                        stroke="#0080ff"
+                        stroke-width="1.5"
+                        fill="none"
+                    ></path>
+                    <circle cx="70" cy="90" r="2" fill="#40a0ff"></circle>
+                    <circle cx="30" cy="80" r="2" fill="#40a0ff"></circle>
+                    <circle cx="10" cy="70" r="2" fill="#40a0ff"></circle>
+                    <circle cx="10" cy="40" r="2" fill="#40a0ff"></circle>
+                    <circle cx="60" cy="30" r="2" fill="#40a0ff"></circle>
+                    <circle cx="90" cy="20" r="2" fill="#40a0ff"></circle>
+                </svg>
+                <div class="absolute inset-0 bg-blue-500/5"></div>
+                <div class="absolute top-1/4 left-1/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
+                <div class="absolute top-2/3 left-1/4 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
+                <div class="absolute top-1/2 left-3/4 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
+                <div class="absolute top-3/4 left-2/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
+                <div class="absolute top-1/3 left-1/2 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
+                <div
+                    class="absolute inset-[30px] border border-blue-600/50 rounded bg-black/40 backdrop-blur-sm transition-all duration-500 hover:border-blue-400/70 hover:bg-black/30 shadow-[inset_0_0_20px_rgba(0,128,255,0.2)]"
+                ></div>
+            </div>
+        </div>
 
-    {/* Circuit border - Top */}
-    <div className="absolute top-0 left-0 right-0 h-[3px] bg-blue-500"></div>
-    <div className="absolute top-0 left-0 w-[3px] h-20 bg-blue-500"></div>
-    <div className="absolute top-0 right-0 w-[3px] h-20 bg-blue-500"></div>
-
-    {/* Circuit border - Bottom */}
-    <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-blue-500"></div>
-    <div className="absolute bottom-0 left-0 w-[3px] h-20 bg-blue-500"></div>
-    <div className="absolute bottom-0 right-0 w-[3px] h-20 bg-blue-500"></div>
-
-    {/* Circuit pattern - Top Left */}
-    <svg
-        className="absolute top-0 left-0 w-1/3 h-1/3"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path
-            d="M0 0 H 30 L 40 10 H 70 L 80 20 H 90 L 100 30 V 50 L 90 60 H 70 L 60 70 H 40 L 30 80 H 10 L 0 90"
-            stroke="#0080ff"
-            strokeWidth="1.5"
-            fill="none"
-        />
-        <circle cx="30" cy="10" r="2" fill="#40a0ff" />
-        <circle cx="70" cy="20" r="2" fill="#40a0ff" />
-        <circle cx="90" cy="30" r="2" fill="#40a0ff" />
-        <circle cx="90" cy="60" r="2" fill="#40a0ff" />
-        <circle cx="40" cy="70" r="2" fill="#40a0ff" />
-        <circle cx="10" cy="80" r="2" fill="#40a0ff" />
-    </svg>
-
-    {/* Circuit pattern - Top Right */}
-    <svg
-        className="absolute top-0 right-0 w-1/3 h-1/3"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path
-            d="M100 0 H 70 L 60 10 H 30 L 20 20 H 10 L 0 30 V 50 L 10 60 H 30 L 40 70 H 60 L 70 80 H 90 L 100 90"
-            stroke="#0080ff"
-            strokeWidth="1.5"
-            fill="none"
-        />
-        <circle cx="70" cy="10" r="2" fill="#40a0ff" />
-        <circle cx="30" cy="20" r="2" fill="#40a0ff" />
-        <circle cx="10" cy="30" r="2" fill="#40a0ff" />
-        <circle cx="10" cy="60" r="2" fill="#40a0ff" />
-        <circle cx="60" cy="70" r="2" fill="#40a0ff" />
-        <circle cx="90" cy="80" r="2" fill="#40a0ff" />
-    </svg>
-
-    {/* Circuit pattern - Bottom Left */}
-    <svg
-        className="absolute bottom-0 left-0 w-1/3 h-1/3"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path
-            d="M0 100 H 30 L 40 90 H 70 L 80 80 H 90 L 100 70 V 50 L 90 40 H 70 L 60 30 H 40 L 30 20 H 10 L 0 10"
-            stroke="#0080ff"
-            strokeWidth="1.5"
-            fill="none"
-        />
-        <circle cx="30" cy="90" r="2" fill="#40a0ff" />
-        <circle cx="70" cy="80" r="2" fill="#40a0ff" />
-        <circle cx="90" cy="70" r="2" fill="#40a0ff" />
-        <circle cx="90" cy="40" r="2" fill="#40a0ff" />
-        <circle cx="40" cy="30" r="2" fill="#40a0ff" />
-        <circle cx="10" cy="20" r="2" fill="#40a0ff" />
-    </svg>
-
-    {/* Circuit pattern - Bottom Right */}
-    <svg
-        className="absolute bottom-0 right-0 w-1/3 h-1/3"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path
-            d="M100 100 H 70 L 60 90 H 30 L 20 80 H 10 L 0 70 V 50 L 10 40 H 30 L 40 30 H 60 L 70 20 H 90 L 100 10"
-            stroke="#0080ff"
-            strokeWidth="1.5"
-            fill="none"
-        />
-        <circle cx="70" cy="90" r="2" fill="#40a0ff" />
-        <circle cx="30" cy="80" r="2" fill="#40a0ff" />
-        <circle cx="10" cy="70" r="2" fill="#40a0ff" />
-        <circle cx="10" cy="40" r="2" fill="#40a0ff" />
-        <circle cx="60" cy="30" r="2" fill="#40a0ff" />
-        <circle cx="90" cy="20" r="2" fill="#40a0ff" />
-    </svg>
-
-    {/* Glow effects */}
-    <div className="absolute inset-0 bg-blue-500/5"></div>
-
-    {/* Small glowing dots */}
-    <div className="absolute top-1/4 left-1/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-    <div className="absolute top-2/3 left-1/4 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-    <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-    <div className="absolute top-3/4 left-2/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-    <div className="absolute top-1/3 left-1/2 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-
-    {/* Inner content area */}
-    <div className="absolute inset-[30px] border border-blue-600/50 rounded bg-black/40 backdrop-blur-sm transition-all duration-500 hover:border-blue-400/70 hover:bg-black/30 shadow-[inset_0_0_20px_rgba(0,128,255,0.2)]"></div>
-</div>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                content: ["./src/**/*.{html,js}"],
+                theme: {
+                    name: "Bluewave",
+                    fontFamily: {
+                        sans: [
+                            "Open Sans",
+                            "ui-sans-serif",
+                            "system-ui",
+                            "sans-serif",
+                            '"Apple Color Emoji"',
+                            '"Segoe UI Emoji"',
+                            '"Segoe UI Symbol"',
+                            '"Noto Color Emoji"'
+                        ]
+                    },
+                    extend: {
+                        fontFamily: {
+                            title: [
+                                "Lato",
+                                "ui-sans-serif",
+                                "system-ui",
+                                "sans-serif",
+                                '"Apple Color Emoji"',
+                                '"Segoe UI Emoji"',
+                                '"Segoe UI Symbol"',
+                                '"Noto Color Emoji"'
+                            ],
+                            body: [
+                                "Open Sans",
+                                "ui-sans-serif",
+                                "system-ui",
+                                "sans-serif",
+                                '"Apple Color Emoji"',
+                                '"Segoe UI Emoji"',
+                                '"Segoe UI Symbol"',
+                                '"Noto Color Emoji"'
+                            ]
+                        },
+                        colors: {
+                            neutral: {
+                                50: "#f7f7f7",
+                                100: "#eeeeee",
+                                200: "#e0e0e0",
+                                300: "#cacaca",
+                                400: "#b1b1b1",
+                                500: "#999999",
+                                600: "#7f7f7f",
+                                700: "#676767",
+                                800: "#545454",
+                                900: "#464646",
+                                950: "#282828"
+                            },
+                            primary: {
+                                50: "#f3f1ff",
+                                100: "#e9e5ff",
+                                200: "#d5cfff",
+                                300: "#b7a9ff",
+                                400: "#9478ff",
+                                500: "#7341ff",
+                                600: "#631bff",
+                                700: "#611bf8",
+                                800: "#4607d0",
+                                900: "#3c08aa",
+                                950: "#220174",
+                                DEFAULT: "#611bf8"
+                            }
+                        }
+                    },
+                    fontSize: {
+                        xs: ["12px", {lineHeight: "19.200000000000003px"}],
+                        sm: ["14px", {lineHeight: "21px"}],
+                        base: ["16px", {lineHeight: "25.6px"}],
+                        lg: ["18px", {lineHeight: "27px"}],
+                        xl: ["20px", {lineHeight: "28px"}],
+                        "2xl": ["24px", {lineHeight: "31.200000000000003px"}],
+                        "3xl": ["30px", {lineHeight: "36px"}],
+                        "4xl": ["36px", {lineHeight: "41.4px"}],
+                        "5xl": ["48px", {lineHeight: "52.800000000000004px"}],
+                        "6xl": ["60px", {lineHeight: "66px"}],
+                        "7xl": ["72px", {lineHeight: "75.60000000000001px"}],
+                        "8xl": ["96px", {lineHeight: "100.80000000000001px"}],
+                        "9xl": ["128px", {lineHeight: "134.4px"}]
+                    },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "6px",
+                        DEFAULT: "12px",
+                        md: "18px",
+                        lg: "24px",
+                        xl: "36px",
+                        "2xl": "48px",
+                        "3xl": "72px",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        0: "0px",
+                        1: "4px",
+                        2: "8px",
+                        3: "12px",
+                        4: "16px",
+                        5: "20px",
+                        6: "24px",
+                        7: "28px",
+                        8: "32px",
+                        9: "36px",
+                        10: "40px",
+                        11: "44px",
+                        12: "48px",
+                        14: "56px",
+                        16: "64px",
+                        20: "80px",
+                        24: "96px",
+                        28: "112px",
+                        32: "128px",
+                        36: "144px",
+                        40: "160px",
+                        44: "176px",
+                        48: "192px",
+                        52: "208px",
+                        56: "224px",
+                        60: "240px",
+                        64: "256px",
+                        72: "288px",
+                        80: "320px",
+                        96: "384px",
+                        px: "1px",
+                        0.5: "2px",
+                        1.5: "6px",
+                        2.5: "10px",
+                        3.5: "14px"
+                    }
+                },
+                plugins: [],
+                important: "#webcrumbs"
+            }
+        </script>
+    </body>
+</html>

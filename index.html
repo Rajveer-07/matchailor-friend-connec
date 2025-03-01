@@ -1,254 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Webcrumbs Plugin</title>
-        <style>
-            @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
-            @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
-        </style>
-    </head>
-    <body>
-        <div id="webcrumbs">
-            <div
-                class="w-[800px] h-[450px] relative bg-gradient-to-b from-blue-900/80 to-black border-2 border-blue-500 rounded-lg overflow-hidden"
-            >
-                <div
-                    class="absolute inset-0 bg-[radial-gradient(#104080_1px,transparent_1px)] bg-[size:20px_20px] opacity-20"
-                ></div>
-                <div class="absolute top-0 left-0 right-0 h-[3px] bg-blue-500"></div>
-                <div class="absolute top-0 left-0 w-[3px] h-20 bg-blue-500"></div>
-                <div class="absolute top-0 right-0 w-[3px] h-20 bg-blue-500"></div>
-                <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-blue-500"></div>
-                <div class="absolute bottom-0 left-0 w-[3px] h-20 bg-blue-500"></div>
-                <div class="absolute bottom-0 right-0 w-[3px] h-20 bg-blue-500"></div>
-                <svg
-                    class="absolute top-0 left-0 w-1/3 h-1/3"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M0 0 H 30 L 40 10 H 70 L 80 20 H 90 L 100 30 V 50 L 90 60 H 70 L 60 70 H 40 L 30 80 H 10 L 0 90"
-                        stroke="#0080ff"
-                        stroke-width="1.5"
-                        fill="none"
-                    ></path>
-                    <circle cx="30" cy="10" r="2" fill="#40a0ff"></circle>
-                    <circle cx="70" cy="20" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="30" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="60" r="2" fill="#40a0ff"></circle>
-                    <circle cx="40" cy="70" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="80" r="2" fill="#40a0ff"></circle>
-                </svg>
-                <svg
-                    class="absolute top-0 right-0 w-1/3 h-1/3"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M100 0 H 70 L 60 10 H 30 L 20 20 H 10 L 0 30 V 50 L 10 60 H 30 L 40 70 H 60 L 70 80 H 90 L 100 90"
-                        stroke="#0080ff"
-                        stroke-width="1.5"
-                        fill="none"
-                    ></path>
-                    <circle cx="70" cy="10" r="2" fill="#40a0ff"></circle>
-                    <circle cx="30" cy="20" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="30" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="60" r="2" fill="#40a0ff"></circle>
-                    <circle cx="60" cy="70" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="80" r="2" fill="#40a0ff"></circle>
-                </svg>
-                <svg
-                    class="absolute bottom-0 left-0 w-1/3 h-1/3"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M0 100 H 30 L 40 90 H 70 L 80 80 H 90 L 100 70 V 50 L 90 40 H 70 L 60 30 H 40 L 30 20 H 10 L 0 10"
-                        stroke="#0080ff"
-                        stroke-width="1.5"
-                        fill="none"
-                    ></path>
-                    <circle cx="30" cy="90" r="2" fill="#40a0ff"></circle>
-                    <circle cx="70" cy="80" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="70" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="40" r="2" fill="#40a0ff"></circle>
-                    <circle cx="40" cy="30" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="20" r="2" fill="#40a0ff"></circle>
-                </svg>
-                <svg
-                    class="absolute bottom-0 right-0 w-1/3 h-1/3"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M100 100 H 70 L 60 90 H 30 L 20 80 H 10 L 0 70 V 50 L 10 40 H 30 L 40 30 H 60 L 70 20 H 90 L 100 10"
-                        stroke="#0080ff"
-                        stroke-width="1.5"
-                        fill="none"
-                    ></path>
-                    <circle cx="70" cy="90" r="2" fill="#40a0ff"></circle>
-                    <circle cx="30" cy="80" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="70" r="2" fill="#40a0ff"></circle>
-                    <circle cx="10" cy="40" r="2" fill="#40a0ff"></circle>
-                    <circle cx="60" cy="30" r="2" fill="#40a0ff"></circle>
-                    <circle cx="90" cy="20" r="2" fill="#40a0ff"></circle>
-                </svg>
-                <div class="absolute inset-0 bg-blue-500/5"></div>
-                <div class="absolute top-1/4 left-1/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-                <div class="absolute top-2/3 left-1/4 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-                <div class="absolute top-1/2 left-3/4 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-                <div class="absolute top-3/4 left-2/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-                <div class="absolute top-1/3 left-1/2 w-1 h-1 bg-blue-300 rounded-full animate-pulse"></div>
-                <div
-                    class="absolute inset-[30px] border border-blue-600/50 rounded bg-black/40 backdrop-blur-sm transition-all duration-500 hover:border-blue-400/70 hover:bg-black/30 shadow-[inset_0_0_20px_rgba(0,128,255,0.2)]"
-                ></div>
-            </div>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Futuristic Circuit Background with Lightning</title>
+    <style>
+        /* Import fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                content: ["./src/**/*.{html,js}"],
-                theme: {
-                    name: "Bluewave",
-                    fontFamily: {
-                        sans: [
-                            "Open Sans",
-                            "ui-sans-serif",
-                            "system-ui",
-                            "sans-serif",
-                            '"Apple Color Emoji"',
-                            '"Segoe UI Emoji"',
-                            '"Segoe UI Symbol"',
-                            '"Noto Color Emoji"'
-                        ]
-                    },
-                    extend: {
-                        fontFamily: {
-                            title: [
-                                "Lato",
-                                "ui-sans-serif",
-                                "system-ui",
-                                "sans-serif",
-                                '"Apple Color Emoji"',
-                                '"Segoe UI Emoji"',
-                                '"Segoe UI Symbol"',
-                                '"Noto Color Emoji"'
-                            ],
-                            body: [
-                                "Open Sans",
-                                "ui-sans-serif",
-                                "system-ui",
-                                "sans-serif",
-                                '"Apple Color Emoji"',
-                                '"Segoe UI Emoji"',
-                                '"Segoe UI Symbol"',
-                                '"Noto Color Emoji"'
-                            ]
-                        },
-                        colors: {
-                            neutral: {
-                                50: "#f7f7f7",
-                                100: "#eeeeee",
-                                200: "#e0e0e0",
-                                300: "#cacaca",
-                                400: "#b1b1b1",
-                                500: "#999999",
-                                600: "#7f7f7f",
-                                700: "#676767",
-                                800: "#545454",
-                                900: "#464646",
-                                950: "#282828"
-                            },
-                            primary: {
-                                50: "#f3f1ff",
-                                100: "#e9e5ff",
-                                200: "#d5cfff",
-                                300: "#b7a9ff",
-                                400: "#9478ff",
-                                500: "#7341ff",
-                                600: "#631bff",
-                                700: "#611bf8",
-                                800: "#4607d0",
-                                900: "#3c08aa",
-                                950: "#220174",
-                                DEFAULT: "#611bf8"
-                            }
-                        }
-                    },
-                    fontSize: {
-                        xs: ["12px", {lineHeight: "19.200000000000003px"}],
-                        sm: ["14px", {lineHeight: "21px"}],
-                        base: ["16px", {lineHeight: "25.6px"}],
-                        lg: ["18px", {lineHeight: "27px"}],
-                        xl: ["20px", {lineHeight: "28px"}],
-                        "2xl": ["24px", {lineHeight: "31.200000000000003px"}],
-                        "3xl": ["30px", {lineHeight: "36px"}],
-                        "4xl": ["36px", {lineHeight: "41.4px"}],
-                        "5xl": ["48px", {lineHeight: "52.800000000000004px"}],
-                        "6xl": ["60px", {lineHeight: "66px"}],
-                        "7xl": ["72px", {lineHeight: "75.60000000000001px"}],
-                        "8xl": ["96px", {lineHeight: "100.80000000000001px"}],
-                        "9xl": ["128px", {lineHeight: "134.4px"}]
-                    },
-                    borderRadius: {
-                        none: "0px",
-                        sm: "6px",
-                        DEFAULT: "12px",
-                        md: "18px",
-                        lg: "24px",
-                        xl: "36px",
-                        "2xl": "48px",
-                        "3xl": "72px",
-                        full: "9999px"
-                    },
-                    spacing: {
-                        0: "0px",
-                        1: "4px",
-                        2: "8px",
-                        3: "12px",
-                        4: "16px",
-                        5: "20px",
-                        6: "24px",
-                        7: "28px",
-                        8: "32px",
-                        9: "36px",
-                        10: "40px",
-                        11: "44px",
-                        12: "48px",
-                        14: "56px",
-                        16: "64px",
-                        20: "80px",
-                        24: "96px",
-                        28: "112px",
-                        32: "128px",
-                        36: "144px",
-                        40: "160px",
-                        44: "176px",
-                        48: "192px",
-                        52: "208px",
-                        56: "224px",
-                        60: "240px",
-                        64: "256px",
-                        72: "288px",
-                        80: "320px",
-                        96: "384px",
-                        px: "1px",
-                        0.5: "2px",
-                        1.5: "6px",
-                        2.5: "10px",
-                        3.5: "14px"
-                    }
-                },
-                plugins: [],
-                important: "#webcrumbs"
-            }
-        </script>
-    </body>
+        /* Reset and basic styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Main container */
+        #webcrumbs {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Circuit background container */
+        .circuit-container {
+            position: relative;
+            width: 800px;
+            height: 450px;
+            background: linear-gradient(135deg, #001f3f, #000428);
+            border: 2px solid #00FFFF;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+        }
+
+        /* Subtle grid pattern */
+        .circuit-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 255, 255, 0.08),
+                rgba(0, 255, 255, 0.08) 1px,
+                transparent 1px,
+                transparent 20px
+            ),
+            repeating-linear-gradient(
+                90deg,
+                rgba(0, 255, 255, 0.08),
+                rgba(0, 255, 255, 0.08) 1px,
+                transparent 1px,
+                transparent 20px
+            );
+            opacity: 0.7;
+        }
+
+        /* Circuit SVG elements */
+        .circuit-svg {
+            position: absolute;
+            width: 33.33%;
+            height: 33.33%;
+            fill: none;
+            stroke: #0080ff;
+            stroke-width: 1.5;
+            animation: circuit-flow 5s infinite linear;
+        }
+
+        .circuit-svg circle {
+            fill: #40a0ff;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        /* SVG positions */
+        .top-left { top: 0; left: 0; }
+        .top-right { top: 0; right: 0; }
+        .bottom-left { bottom: 0; left: 0; }
+        .bottom-right { bottom: 0; right: 0; }
+
+        /* Circuit flow animation */
+        @keyframes circuit-flow {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: 100; }
+        }
+
+        /* Lightning effect */
+        .lightning {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(0, 255, 255, 0.2), transparent 50%);
+            opacity: 0;
+            animation: lightning-flash 3s infinite ease-in-out;
+            filter: blur(5px);
+        }
+
+        @keyframes lightning-flash {
+            0% { opacity: 0; }
+            10% { opacity: 0.5; }
+            20% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* Pulsing dots */
+        .pulse-dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00FFFF;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00FFFF;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Dot positions */
+        .dot1 { top: 25%; left: 33%; }
+        .dot2 { top: 66%; left: 25%; }
+        .dot3 { top: 50%; left: 75%; }
+        .dot4 { top: 75%; left: 66%; }
+        .dot5 { top: 33%; left: 50%; }
+
+        /* Inner shadow and blur effect */
+        .inner-shadow {
+            position: absolute;
+            inset: 30px;
+            border: 1px solid rgba(0, 255, 255, 0.5);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            box-shadow: inset 0 0 20px rgba(0, 128, 255, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        .inner-shadow:hover {
+            border-color: rgba(0, 255, 255, 0.7);
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 30px rgba(0, 128, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div id="webcrumbs">
+        <div class="circuit-container">
+            <!-- Circuit SVGs -->
+            <svg class="circuit-svg top-left" viewBox="0 0 100 100">
+                <path d="M0 0 H30 L40 10 H70 L80 20 H90 L100 30 V50 L90 60 H70 L60 70 H40 L30 80 H10 L0 90" stroke="#0080ff" stroke-width="1.5" fill="none" stroke-dasharray="100"></path>
+                <circle cx="30" cy="10" r="2"></circle>
+                <circle cx="70" cy="20" r="2"></circle>
+                <circle cx="90" cy="30" r="2"></circle>
+                <circle cx="90" cy="60" r="2"></circle>
+                <circle cx="40" cy="70" r="2"></circle>
+                <circle cx="10" cy="80" r="2"></circle>
+            </svg>
+            <svg class="circuit-svg top-right" viewBox="0 0 100 100">
+                <path d="M100 0 H70 L60 10 H30 L20 20 H10 L0 30 V50 L10 60 H30 L40 70 H60 L70 80 H90 L100 90" stroke="#0080ff" stroke-width="1.5" fill="none" stroke-dasharray="100"></path>
+                <circle cx="70" cy="10" r="2"></circle>
+                <circle cx="30" cy="20" r="2"></circle>
+                <circle cx="10" cy="30" r="2"></circle>
+                <circle cx="10" cy="60" r="2"></circle>
+                <circle cx="60" cy="70" r="2"></circle>
+                <circle cx="90" cy="80" r="2"></circle>
+            </svg>
+            <svg class="circuit-svg bottom-left" viewBox="0 0 100 100">
+                <path d="M0 100 H30 L40 90 H70 L80 80 H90 L100 70 V50 L90 40 H70 L60 30 H40 L30 20 H10 L0 10" stroke="#0080ff" stroke-width="1.5" fill="none" stroke-dasharray="100"></path>
+                <circle cx="30" cy="90" r="2"></circle>
+                <circle cx="70" cy="80" r="2"></circle>
+                <circle cx="90" cy="70" r="2"></circle>
+                <circle cx="90" cy="40" r="2"></circle>
+                <circle cx="40" cy="30" r="2"></circle>
+                <circle cx="10" cy="20" r="2"></circle>
+            </svg>
+            <svg class="circuit-svg bottom-right" viewBox="0 0 100 100">
+                <path d="M100 100 H70 L60 90 H30 L20 80 H10 L0 70 V50 L10 40 H30 L40 30 H60 L70 20 H90 L100 10" stroke="#0080ff" stroke-width="1.5" fill="none" stroke-dasharray="100"></path>
+                <circle cx="70" cy="90" r="2"></circle>
+                <circle cx="30" cy="80" r="2"></circle>
+                <circle cx="10" cy="70" r="2"></circle>
+                <circle cx="10" cy="40" r="2"></circle>
+                <circle cx="60" cy="30" r="2"></circle>
+                <circle cx="90" cy="20" r="2"></circle>
+            </svg>
+
+            <!-- Lightning effect -->
+            <div class="lightning"></div>
+
+            <!-- Pulsing dots -->
+            <div class="pulse-dot dot1"></div>
+            <div class="pulse-dot dot2"></div>
+            <div class="pulse-dot dot3"></div>
+            <div class="pulse-dot dot4"></div>
+            <div class="pulse-dot dot5"></div>
+
+            <!-- Inner shadow and blur effect -->
+            <div class="inner-shadow"></div>
+        </div>
+    </div>
+</body>
 </html>
